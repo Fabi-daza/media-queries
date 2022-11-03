@@ -1,0 +1,104 @@
+:root{
+    --background:#f7f7f7;
+    --bordergray: #d1d6cf;
+    --red:#f22141;
+    --white:#ffffff;
+    --black:#000000;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header nav"
+    "filter filter"
+    "main main"
+    "footer footer";
+    grid-template-rows: 1fr 1fr 5fr 1fr;
+    grid-template-columns: 7fr 1fr;
+}
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--red);
+}
+header h1{
+    color: var(--white);
+    font-size: 30px;
+}
+nav{
+    grid-area: nav;
+    padding: 30px;
+    background-color: var(--red);
+    color: var(--white);
+}
+.filter{
+    grid-area: filter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
+.order{
+    list-style: none;
+    border: 1px solid var(--black);
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    font-size: 20px;
+    
+}
+.order > li > a{
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    color: var(--black);
+}
+.categories{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    padding: 0px;
+    margin: 0px -160px;
+    background-color: var(--white);
+    border: 1px solid;
+    border-radius: 15px;
+}
+.order >li:hover .categories{
+    display: block;
+}
+.categories > li{
+    padding: 10px;
+    border-bottom: 1px solid var(--bordergray);
+}
+.categories > li:hover{
+    background-color: var(--background);
+    border-radius: 15px;   
+}
+.categories > li > a{
+    text-decoration: none;
+    color: var(--black);
+}
+main{
+    grid-area: main;
+    background-color: var(--background);
+}
+footer{
+    grid-area: footer;
+}
+@media  screen and (min-width:576px){
+
+}
+  
