@@ -117,6 +117,8 @@ aside{
 main{
     grid-area: main;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -178,4 +180,22 @@ footer h5{
 }
 .social-icons svg{
     fill: var(--white);
+}
+.pagination{
+    margin: 20px 0px;
+}
+.pagination a{
+    display: inline-block;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    padding: 5px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+}
+.pagination a:active{
+    background-color: var(--red);
+    color: var(--white);
 }
